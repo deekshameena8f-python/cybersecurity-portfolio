@@ -1,6 +1,7 @@
 # Security Log Analyzer
 # Feature 1: Count failed login attempts
 # Feature 2: Track failed login attempts by user
+# Feature 3: Detect brute force attacks
 
 # Open the log file
 with open("logs/sample.log") as f:
@@ -31,4 +32,17 @@ print("\nFailed Login Attempts By User")
 
 for user, count in attempts.items():
     print(user, count)
+
+for user, count in attempts.items():
+
+    if count >= 5:
+
+        print("=" * 40)
+        print("POTENTIAL BRUTE FORCE DETECTED")
+        print("=" * 40)
+
+        print("User:", user)
+        print("Failed Attempts:", count)
+
+
 
