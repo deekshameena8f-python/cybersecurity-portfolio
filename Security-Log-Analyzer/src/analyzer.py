@@ -2,6 +2,7 @@
 # Feature 1: Count failed login attempts
 # Feature 2: Track failed login attempts by user
 # Feature 3: Detect brute force attacks
+# Feature 4: Generate security reports
 
 # Open the log file
 with open("logs/sample.log") as f:
@@ -43,6 +44,22 @@ for user, count in attempts.items():
 
         print("User:", user)
         print("Failed Attempts:", count)
+
+# Create report
+report = open("reports/report.txt", "w")
+
+report.write("SECURITY REPORT\n")
+report.write("----------------------\n\n")
+
+report.write(f"Total Failed Logins: {failed}\n\n")
+
+for user in suspicious_users:
+
+    report.write(f"Suspicious User: {user}\n")
+
+report.close()
+
+print("\nReport Generated Successfully")
 
 
 
