@@ -3,6 +3,7 @@
 # Feature 2: Track failed login attempts by user
 # Feature 3: Detect brute force attacks
 # Feature 4: Generate security reports
+#Final version
 
 # Open the log file
 with open("logs/sample.log") as f:
@@ -26,40 +27,55 @@ for line in logs:
 
         attempts[user] = attempts.get(user, 0) + 1
 
-# Display total failures
-print("Failed Logins:", failed)
-
-print("\nFailed Login Attempts By User")
-
-for user, count in attempts.items():
-    print(user, count)
+suspicious_users = []
 
 for user, count in attempts.items():
 
     if count >= 5:
+        suspicious_users.append(user)
 
-        print("=" * 40)
-        print("POTENTIAL BRUTE FORCE DETECTED")
-        print("=" * 40)
+print("=" * 50)
+print("SECURITY LOG ANALYZER")
+print("=" * 50)
 
-        print("User:", user)
-        print("Failed Attempts:", count)
+# Display total failures
+print("Total Failed Logins:", failed)
 
-# Create report
-report = open("reports/report.txt", "w")
+print("\nFailed Login Attempts By User")
 
-report.write("SECURITY REPORT\n")
-report.write("----------------------\n\n")
+for user, count in attempts.items():
+    print(user,':', count)
 
-report.write(f"Total Failed Logins: {failed}\n\n")
+print("\nSuspicious Users")
 
-for user in suspicious_users:
+if suspicious_users:
 
-    report.write(f"Suspicious User: {user}\n")
+    for user in suspicious_users:
+        print(user)
 
-report.close()
+else:
+    print("None")
 
-print("\nReport Generated Successfully")
+with open("reports/report.txt", "w") as report:
 
+    report.write("SECURITY REPORT\n")
+    report.write("====================\n\n")
 
+    report.write(f"Total Failed Logins: {failed}\n\n")
 
+    report.write("Failed Attempts By User\n")
+
+    for user, count in attempts.items():
+        report.write(f"{user}: {count}\n")
+
+    report.write("\nSuspicious Users\n")
+
+    if suspicious_users:
+
+        for user in suspicious_users:
+            report.write(f"{user}\n")
+
+    else:
+        report.write("None\n")
+
+print("\nReport saved to reports/report.txt")
