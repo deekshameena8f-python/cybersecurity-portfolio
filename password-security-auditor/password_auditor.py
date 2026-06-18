@@ -53,4 +53,11 @@ else:
 
 print("Strength:", strength) 
 
+with open("common_passwords.txt", "r") as file:
+
+    common_passwords = file.read().splitlines()
+
+if password.lower() in common_passwords:
+    print("WARNING: Common password detected") 
+
 
