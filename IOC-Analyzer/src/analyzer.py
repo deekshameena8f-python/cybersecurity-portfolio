@@ -7,36 +7,27 @@ ip_pattern = r"^\d+.\d+.\d+.\d+$"
 hash_pattern = r"^[a-fA-F0-9]{32}$"
 email_pattern = r"^[^@]+@[^@]+.[^@]+$"
 
-counts = {
-"IP": 0,
-"Domain": 0,
-"Hash": 0,
-"Email": 0,
-"Unknown": 0
-}
+print("IOC Risk Assessment")
+print("=" * 50)
 
 for ioc in iocs:
 
-```
-if re.match(ip_pattern, ioc):
-    counts["IP"] += 1
+if re.match(hash_pattern, ioc):
+    risk = "HIGH"
 
-elif re.match(hash_pattern, ioc):
-    counts["Hash"] += 1
+elif re.match(ip_pattern, ioc):
+    risk = "MEDIUM"
 
 elif re.match(email_pattern, ioc):
-    counts["Email"] += 1
+    risk = "MEDIUM"
 
 elif "." in ioc:
-    counts["Domain"] += 1
+    risk = "HIGH"
 
 else:
-    counts["Unknown"] += 1
-```
+    risk = "LOW"
 
-print("IOC Statistics")
-print("=" * 40)
+print(f"{ioc} -> {risk}")
 
-for category, count in counts.items():
-print(category, ":", count)
+
 
