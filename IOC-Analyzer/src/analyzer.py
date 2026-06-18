@@ -7,23 +7,36 @@ ip_pattern = r"^\d+.\d+.\d+.\d+$"
 hash_pattern = r"^[a-fA-F0-9]{32}$"
 email_pattern = r"^[^@]+@[^@]+.[^@]+$"
 
-print("IOC Classification")
-print("=" * 40)
+counts = {
+"IP": 0,
+"Domain": 0,
+"Hash": 0,
+"Email": 0,
+"Unknown": 0
+}
 
 for ioc in iocs:
 
+```
 if re.match(ip_pattern, ioc):
-    print(ioc, "-> IP Address")
+    counts["IP"] += 1
 
 elif re.match(hash_pattern, ioc):
-    print(ioc, "-> MD5 Hash")
+    counts["Hash"] += 1
 
 elif re.match(email_pattern, ioc):
-    print(ioc, "-> Email Address")
+    counts["Email"] += 1
 
 elif "." in ioc:
-    print(ioc, "-> Domain")
+    counts["Domain"] += 1
 
 else:
-    print(ioc, "-> Unknown")
+    counts["Unknown"] += 1
+```
+
+print("IOC Statistics")
+print("=" * 40)
+
+for category, count in counts.items():
+print(category, ":", count)
 
