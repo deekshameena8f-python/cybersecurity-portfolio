@@ -60,4 +60,23 @@ with open("common_passwords.txt", "r") as file:
 if password.lower() in common_passwords:
     print("WARNING: Common password detected") 
 
+report = f"""
+PASSWORD AUDIT REPORT
+=====================
+
+Length: {length}
+Uppercase: {has_upper}
+Lowercase: {has_lower}
+Digits: {has_digit}
+Special Characters: {has_special}
+
+Score: {score}
+Strength: {strength}
+"""
+
+with open("reports/audit_report.txt", "w") as file:
+    file.write(report)
+
+print("Report saved.")
+
 
