@@ -80,3 +80,21 @@ with open("reports/audit_report.txt", "w") as file:
 print("Report saved.")
 
 
+print("\nSuggestions:")
+
+if length < 8:
+    print("- Use at least 8 characters")
+
+if not has_upper:
+    print("- Add uppercase letters")
+
+if not has_lower:
+    print("- Add lowercase letters")
+
+if not has_digit:
+    print("- Add numbers")
+
+if not has_special:
+    print("- Add special characters")
+
+
