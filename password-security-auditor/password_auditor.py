@@ -23,4 +23,22 @@ print("Contains Uppercase:", has_upper)
 print("Contains Lowercase:", has_lower)
 print("Contains Digit:", has_digit)
 print("Contains Special Character:", has_special)
+score = 0
+
+if length >= 8:
+    score += 1
+
+if has_upper:
+    score += 1
+
+if has_lower:
+    score += 1
+
+if has_digit:
+    score += 1
+
+if has_special:
+    score += 1
+
+print("Score:", score)
 
