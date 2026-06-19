@@ -39,3 +39,33 @@ def send_email_alert(changes):
         )
 
         smtp.send_message(message)
+
+from colorama import Fore, Style, init
+
+init(autoreset=True)
+
+def display_alerts(changes):
+    """
+    Display colorized alerts in the terminal.
+    """
+
+    for file in changes["modified"]:
+        print(
+            Fore.YELLOW +
+            f"[MODIFIED] {file}" +
+            Style.RESET_ALL
+        )
+
+    for file in changes["new"]:
+        print(
+            Fore.GREEN +
+            f"[NEW FILE] {file}" +
+            Style.RESET_ALL
+        )
+
+    for file in changes["deleted"]:
+        print(
+            Fore.RED +
+            f"[DELETED] {file}" +
+            Style.RESET_ALL
+        )
