@@ -25,3 +25,14 @@ def detect_changes(current, baseline):
                 modified.append(file)
 
     return modified
+
+def detect_new_files(current, baseline):
+
+    new_files = []
+
+    for file in current:
+
+        if file not in baseline:
+            new_files.append(file)
+
+    return new_files
