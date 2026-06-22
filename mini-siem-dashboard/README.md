@@ -104,20 +104,16 @@ python -m unittest discover tests
 ## Screenshots
 
 ### Dashboard Overview
-
-(Add screenshot)
-
 ### Parsed Log Events
-
-(Add screenshot)
-
 ### Alert Generation
-
-(Add screenshot)
-
 ### Detection Results
 
-(Add screenshot)
+<img width="1797" height="896" alt="Screenshot (708)" src="https://github.com/user-attachments/assets/bbb304c3-3e2c-4d7c-963c-9baccbf94ec0" />
+<img width="1775" height="968" alt="Screenshot (710)" src="https://github.com/user-attachments/assets/70712e25-6a5c-41d2-9d4c-6351aa7596c1" />
+<img width="1854" height="918" alt="Screenshot (712)" src="https://github.com/user-attachments/assets/28810781-211b-4308-b898-1c47a9837ee5" />
+<img width="1866" height="947" alt="Screenshot (713)" src="https://github.com/user-attachments/assets/7a50f423-2f7e-46c7-b149-dc0529765e70" />
+
+
 
 ---
 
