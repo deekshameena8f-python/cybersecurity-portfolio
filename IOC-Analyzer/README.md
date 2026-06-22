@@ -80,16 +80,12 @@ Example:
 ## Screenshots
 
 ### IOC Input File
-
-(Add screenshot)
-
 ### Analysis Results
-
-(Add screenshot)
-
 ### Generated Report
+<img width="689" height="972" alt="Screenshot (722)" src="https://github.com/user-attachments/assets/f351cb80-f8ad-4a8d-bd1a-a4877e25b78a" />
+<img width="685" height="968" alt="Screenshot (723)" src="https://github.com/user-attachments/assets/98df4450-64f8-4d31-9cb1-0cefb041e070" />
 
-(Add screenshot)
+
 
 ---
 
