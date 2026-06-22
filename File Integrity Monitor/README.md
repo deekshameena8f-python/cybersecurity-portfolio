@@ -1,3 +1,126 @@
 # File Integrity Monitor
 
-Detects file modifications, additions and deletions using SHA-256 hashing.
+## Overview
+
+The File Integrity Monitor (FIM) is a cybersecurity tool designed to monitor files and directories for unauthorized modifications. The system creates a baseline of file hashes and continuously compares current file states against the baseline to detect file creation, modification, and deletion events.
+
+This project demonstrates fundamental security monitoring concepts used in Host Intrusion Detection Systems (HIDS) and enterprise security solutions.
+
+---
+
+## Features
+
+* SHA-256 file hashing
+* Baseline creation and storage
+* File modification detection
+* New file detection
+* File deletion detection
+* Continuous monitoring loop
+* Colorized console alerts
+* CSV report generation
+* Email alert support
+* Log file generation
+
+---
+
+## Project Structure
+
+File Integrity Monitor/
+
+├── data/
+
+│ ├── baseline.json
+
+│ └── reports/
+
+├── logs/
+
+│ └── fim.log
+
+├── src/
+
+│ ├── **init**.py
+
+│ ├── alerts.py
+
+│ ├── baseline.py
+
+│ ├── exports.py
+
+│ ├── hash_utils.py
+
+│ ├── monitor.py
+
+│ ├── report.py
+
+│ └── scanner.py
+
+├── screenshots/
+
+├── README.md
+
+├── main.py
+
+└── requirements.txt
+
+---
+
+## Technologies Used
+
+* Python
+* SHA-256 Hashing
+* JSON
+* CSV
+* Colorama
+
+---
+
+## How It Works
+
+1. A baseline of file hashes is generated.
+2. Files are scanned periodically.
+3. Current hashes are compared with baseline hashes.
+4. Changes are identified.
+5. Alerts and reports are generated.
+
+---
+
+## Screenshots
+
+### Baseline Creation
+
+(Add screenshot)
+
+### Change Detection
+
+(Add screenshot)
+
+### CSV Report Generation
+
+(Add screenshot)
+
+### Console Alerts
+
+(Add screenshot)
+
+---
+
+## Future Improvements
+
+* Real-time file monitoring
+* Web dashboard
+* Database storage
+* Threat scoring
+* SIEM integration
+
+---
+
+## Educational Objectives
+
+This project demonstrates:
+
+* File Integrity Monitoring
+* Security Automation
+* Incident Detection
+* Log Management
+* Cybersecurity Monitoring Workflows
