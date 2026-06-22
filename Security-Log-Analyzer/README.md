@@ -72,16 +72,12 @@ Security-Log-Analyzer/
 ## Screenshots
 
 ### Sample Log File
-
-(Add screenshot)
-
 ### Log Analysis Output
-
-(Add screenshot)
-
 ### Generated Report
+<img width="946" height="965" alt="Screenshot (715)" src="https://github.com/user-attachments/assets/4f439a5e-888d-423f-967c-76d5a104c077" />
+<img width="635" height="967" alt="Screenshot (718)" src="https://github.com/user-attachments/assets/06ef1041-ba87-4875-8fa9-21326412c5b4" />
+<img width="661" height="961" alt="Screenshot (720)" src="https://github.com/user-attachments/assets/9662cc0a-797a-4297-91e1-02f509165464" />
 
-(Add screenshot)
 
 ---
 
