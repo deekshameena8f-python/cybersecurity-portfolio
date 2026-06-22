@@ -4,7 +4,7 @@ from src.baseline import load_baseline
 from src.monitor import detect_changes
 from src.report import generate_report
 from src.alerts import display_alerts, send_email_alert
-from src.export import export_to_csv
+from src.exports import export_to_csv
 
 
 TARGET_DIRECTORY = "."
