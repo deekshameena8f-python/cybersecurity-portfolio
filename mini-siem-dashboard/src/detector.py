@@ -1,4 +1,10 @@
-# src/detector.py
+
+import re
+
+SUSPICIOUS_IPS = [
+    "192.168.1.10",
+    "10.0.0.5"
+]
 
 def detect_alerts(logs):
 
@@ -8,12 +14,14 @@ def detect_alerts(logs):
 
         if log["level"] == "ERROR":
             alerts.append(
-                f"ALERT: {log['message']}"
+                f"ERROR ALERT: {log['message']}"
             )
 
-        if "Suspicious" in log["message"]:
-            alerts.append(
-                f"ALERT: {log['message']}"
-            )
+        for ip in SUSPICIOUS_IPS:
+
+            if ip in log["message"]:
+                alerts.append(
+                    f"IOC DETECTED: {ip}"
+                )
 
     return alerts
