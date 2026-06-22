@@ -100,15 +100,15 @@ password123
 
 ### Password Analysis
 
-(Add screenshot)
-
 ### Security Score Output
 
-(Add screenshot)
-
 ### Audit Report
+<img width="1051" height="967" alt="Screenshot (730)" src="https://github.com/user-attachments/assets/aea83c32-f624-4541-9930-e8fa2ab88f8c" />
+<img width="1054" height="965" alt="Screenshot (749)" src="https://github.com/user-attachments/assets/ae464cba-1206-4bc2-9757-966424a07b31" />
+<img width="1037" height="898" alt="Screenshot (750)" src="https://github.com/user-attachments/assets/a4b2d6e2-e11e-49a8-8b3e-1a48f5ffb282" />
 
-(Add screenshot)
+
+
 
 ---
 
