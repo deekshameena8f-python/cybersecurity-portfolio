@@ -87,21 +87,9 @@ File Integrity Monitor/
 
 ## Screenshots
 
-### Baseline Creation
+<img width="1920" height="1080" alt="Screenshot (926)" src="https://github.com/user-attachments/assets/a2a53b09-717d-49e3-a3ad-1ffe62fccc5d" />
+<img width="1920" height="1080" alt="Screenshot (924)" src="https://github.com/user-attachments/assets/1d17eee6-a586-40f5-b0de-c25b78eefe69" />
 
-(Add screenshot)
-
-### Change Detection
-
-(Add screenshot)
-
-### CSV Report Generation
-
-(Add screenshot)
-
-### Console Alerts
-
-(Add screenshot)
 
 ---
 
